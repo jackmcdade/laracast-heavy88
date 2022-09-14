@@ -1,0 +1,56 @@
+<nav x-data="{mobileNavOpen: false}">
+    <div class="p-4 lg:px-6 flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="/" class="font-bold text-3xl text-white p-2 antialiased">Heavy 88</a>
+            <ul class="hidden lg:flex items-center space-x-4 ml-6">
+                <li><a href="#" class="p-2 relative hover:text-white transition">The Delorean</a></li>
+                <li><a href="#" class="p-2 relative hover:text-white transition">FluxTech™</a></li>
+                <li><a href="#" class="p-2 relative hover:text-white transition">News & Press</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center space-x-4 px-2">
+            <div x-data="{ showSearch: false, searchQuery: '', searchResults: false }" @keydown.escape="showSearch = (searchQuery !== ''); searchQuery = ''">
+                <button type="button" class="hidden md:flex items-center py-2 px-4 group text-gray-500 hover:text-white transition font-bold antialiased" @click="showSearch = true; $focus.next()">
+                    <svg class="mr-3 text-gray-500 transition group-hover:text-white" xmlns="http://www.w3.org/2000/svg" height="21" width="21" viewBox="0 0 16 16"><path d="M15.587 14.413l-4.354-4.353A6.1 6.1 0 0012.5 6.333a6.18 6.18 0 10-2.44 4.907l4.353 4.353a.84.84 0 001.174 0 .833.833 0 000-1.18zM1.833 6.333a4.5 4.5 0 114.5 4.5 4.507 4.507 0 01-4.5-4.5z" fill="currentColor"/></svg>
+                    <span>Search</span>
+                </button>
+                <div
+                    class="fixed p-[12vh] inset-0 z-30 backdrop-blur-sm flex flex-col overflow-auto bg-black bg-opacity-50"
+                    x-cloak
+                    x-transition.opacity
+                    x-show="showSearch"
+                    x-trap.noscroll="showSearch"
+                >
+                    <div class="mx-auto text-left bg-gray-200 w-full rounded-lg max-w-3xl" click.away="showSearch = false" x-transition @click.outside="showSearch = false; searchQuery = ''">
+                        <div class="p-2 flex items-center px-6">
+                            <svg class="mr-4 text-white" xmlns="http://www.w3.org/2000/svg" height="21" width="21" viewBox="0 0 16 16"><path d="M15.587 14.413l-4.354-4.353A6.1 6.1 0 0012.5 6.333a6.18 6.18 0 10-2.44 4.907l4.353 4.353a.84.84 0 001.174 0 .833.833 0 000-1.18zM1.833 6.333a4.5 4.5 0 114.5 4.5 4.507 4.507 0 01-4.5-4.5z" fill="currentColor"/></svg>
+                            <input type="text" ref="searchInput" x-model="searchQuery" class="bg-transparent block w-full text-white inline-block py-2 focus:outline-none focus-border focus-border-white" placeholder="Search for anything...">
+                            <button class="text-2xs tracking-wider bg-gray-300 px-1 py-px rounded-sm hover:text-white" @click="showSearch = false">ESC</button>
+                        </div>
+                        <div class="p-6 flex border-t flex-col space-y-1" x-show="searchQuery">
+                            <a class="px-4 py-2 rounded bg-gray-300 text-white hover:bg-gray-300 hover:bg-opacity-50 block" href="">Search Result Number One</a>
+                            <a class="px-4 py-2 rounded hover:bg-gray-300 bg-opacity-50 block" href="">Another Search Result</a>
+                            <a class="px-4 py-2 rounded hover:bg-gray-300 bg-opacity-50 block" href="">Another Search Result</a>
+                            <a class="px-4 py-2 rounded hover:bg-gray-300 bg-opacity-50 block" href="">Another Search Result</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="hidden md:flex bg-gradient-to-br from-pink to-purple rounded-lg text-white inline-block py-2 px-6 font-bold shadow-highlight transition hover:scale-[1.05]">
+                Book Now
+            </a>
+            <button type="button" class="lg:hidden p-2 text-white" @click="mobileNavOpen = ! mobileNavOpen">
+                <svg x-show="! mobileNavOpen" xmlns="http://www.w3.org/2000/svg" height="21" width="21" viewBox="0 0 21 21"><g fill="currentColor" transform="scale(.875)"><rect x=".5" y="2.5" width="23" height="3" rx="1"/><rect x=".5" y="10.5" width="23" height="3" rx="1"/><rect x=".5" y="18.5" width="23" height="3" rx="1"/></g></svg>
+                <svg x-show="mobileNavOpen" x-cloak="true" xmlns="http://www.w3.org/2000/svg" height="21" width="21" viewBox="0 0 21 21"><g transform="scale(.875)"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M.75 23.249l22.5-22.5M23.25 23.249L.75.749"/></g></svg>
+            </button>
+        </div>
+    </div>
+    <div class="p-2 border-t w-full bg-gray-100 min-h-screen absolute z-30" x-show="mobileNavOpen" x-cloak x-trap.noscroll="mobileNavOpen">
+        <ul class="flex flex-col text-white">
+            <li><a href="/" class="py-2 px-4 block font-bold">Home</a></li>
+            <li><a href="#" class="py-2 px-4 block font-bold">The Delorean</a></li>
+            <li><a href="#" class="py-2 px-4 block font-bold">FluxTech™</a></li>
+            <li><a href="#" class="py-2 px-4 block font-bold">News & Press</a></li>
+        </ul>
+    </div>
+</nav>
