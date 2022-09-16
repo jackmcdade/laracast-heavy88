@@ -1,0 +1,166 @@
+title: Landing
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: subtitle
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Subtitle
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: teaser
+        field:
+          input_type: text
+          antlers: false
+          display: Teaser
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: show_lightning_bolts
+        field:
+          default: true
+          display: 'Show Lightning Bolts'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: panels
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: panel_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Panel Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: panel_teaser
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Panel Teaser'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: panel_heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Panel Heading'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: panel_content
+                  field:
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    antlers: false
+                    display: 'Panel Content'
+                    type: markdown
+                    icon: markdown
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: cta_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'CTA Text'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 50
+                -
+                  handle: cta_link
+                  field:
+                    collections:
+                      - pages
+                    display: 'CTA Link'
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 50
+          display: Panels
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
