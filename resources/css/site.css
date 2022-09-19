@@ -1,5 +1,65 @@
 /* This is all you. */
 
+[x-cloak] {
+    display: none !important;
+}
+
+.grain::after {
+    content: '';
+    @apply absolute inset-0 z-10 ;
+    mix-blend-mode: multiply;
+    filter: url(#noiseFilter);
+}
+
+.grain {
+    @apply relative overflow-hidden;
+}
+
+@keyframes film {
+    from {background-position: 0 0;}
+    to {background-position: 1000px 500px; }
+}
+
+.animation-film {
+    animation: film 1s steps(3, end) infinite;
+}
+
+.content {
+    p {
+        @apply text-lg mb-8 text-gray-900;
+    }
+
+    h2, h3, h4 {
+        @apply text-white font-bold mb-8;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+    ul {
+        @apply text-gray-900 mb-8 list-disc pl-4;
+        li {
+            @apply mb-2;
+        }
+    }
+    img {
+
+    }
+}
+
+.article > p:first-of-type {
+    @apply text-xl font-medium;
+}
+
+
 .hero {
     p {
         @apply text-[32px] tracking-tight leading-tight text-gray-500;
