@@ -7,7 +7,7 @@ taxonomies:
 revisions: false
 route: '/{mount}/{slug}'
 date: true
-sort_dir: asc
+sort_dir: desc
 date_behavior:
   past: public
   future: private
