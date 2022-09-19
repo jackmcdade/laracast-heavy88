@@ -24,7 +24,7 @@ sections:
       -
         handle: featured_image
         field:
-          mode: list
+          mode: grid
           container: assets
           restrict: false
           allow_uploads: true
@@ -89,4 +89,12 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
 title: 'News Article'
