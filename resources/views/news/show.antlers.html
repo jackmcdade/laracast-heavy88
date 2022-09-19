@@ -1,6 +1,8 @@
 <article class="max-w-5xl mx-auto px-4 lg:px-6 py-24 relative">
     <header class="max-w-3xl mx-auto">
-        <a href="" class="px-3 py-1 text-gray-100 font-bold bg-yellow transition hover:bg-orange rounded-full inline-block mb-8">Technology</a>
+        {{ tags }}
+        <a href="{{ url }}" class="px-3 py-1 text-gray-100 font-bold bg-yellow transition hover:bg-orange rounded-full inline-block mb-8">{{ title }}</a>
+        {{ /tags }}
         <h1 class="text-5xl md:text-6xl lg:text-7xl tracking-tight text-white font-bold">{{ title }}</h1>
         <div class="flex items-center mt-12">
             <img class="rounded-full h-16 w-16" src="{{ author:avatar }}" alt="{{ author:avatar:alt }}">
