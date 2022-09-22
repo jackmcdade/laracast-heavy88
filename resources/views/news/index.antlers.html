@@ -7,7 +7,7 @@
     {{ collection:news }}
     <div class="rounded-xl h-[500px] block bg-gray-200 group flex flex-col hover:scale-105 transition duration-[400ms] ease-in-out">
         <a href="{{ url }}" class="relative overflow-hidden rounded-t-xl">
-            <img class="object-cover transition duration-[400ms] ease-in-out scale-110 group-hover:scale-100 w-full h-60" src="{{ featured_image }}" alt="">
+            <img class="object-cover transition duration-[400ms] ease-in-out scale-110 group-hover:scale-100 w-full h-60" src="{{ glide :src="featured_image" width="600" height="400" fit="crop_focal" }}" alt="">
             <div class="absolute opacity-0 transition duration-[400ms] ease-in-out group-hover:opacity-75 z-20 inset-0 mix-blend-overlay object-cover w-full h-60 bg-gradient-to-br from-orange-dark to-aqua"></div>
         </a>
         <div class="px-6 py-8 flex flex-col justify-between flex-1">
