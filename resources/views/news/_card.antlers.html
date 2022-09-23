@@ -13,9 +13,9 @@
                 <p class="text-sm">By <a href="" class="text-gray-700 hover:text-white">{{ author:name }}</a></p>
             </div>
             {{ if ! hide_tag }}
-            {{ tags }}
-                <a href="{{ url }}" class="px-3 py-1 text-gray-100 font-bold bg-yellow transition hover:bg-orange rounded-full text-sm">{{ title }}</a>
-            {{ /tags }}
+                {{ tags limit="1" }}
+                    <a href="{{ url }}" class="px-3 py-1 text-gray-100 font-bold bg-yellow transition hover:bg-orange rounded-full text-sm">{{ title }}</a>
+                {{ /tags }}
             {{ /if }}
         </div>
     </div>
