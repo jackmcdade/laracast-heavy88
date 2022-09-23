@@ -3,9 +3,25 @@
         <div class="flex items-center">
             <a href="/" class="font-bold text-3xl text-white p-2 antialiased">Heavy 88</a>
             <ul class="hidden lg:flex items-center space-x-4 ml-6">
-                <li><a href="#" class="p-2 relative hover:text-white transition">The Delorean</a></li>
-                <li><a href="#" class="p-2 relative hover:text-white transition">FluxTech™</a></li>
-                <li><a href="#" class="p-2 relative hover:text-white transition">News & Press</a></li>
+                {{ nav:collection:pages }}
+                    {{ if ! children }}
+                        <li><a href="{{ url }}" class="p-2 relative hover:text-white transition">{{ title }}</a></li>
+                    {{ else }}
+                    <li class="group">
+                        <button class="p-2 relative flex items-center transition group-hover:text-white">
+                            <span>{{ title }}</span>
+                            {{ svg src="icons/arrow-down" class="ml-2" }}
+                        </button>
+                        <div class="absolute rounded-lg py-4 -mt-2 px-2 bg-gray-200 hidden group-hover:block">
+                            <ul class="flex-col">
+                                {{ children }}
+                                <li><a href="{{ url }}" class="py-2 px-4 block transition hover:bg-gray-300 rounded hover:text-white">{{ title }}</a></li>
+                                {{ /children }}
+                            </ul>
+                        </div>
+                    </li>
+                    {{ /if }}
+                {{ /nav:collection:pages }}
             </ul>
         </div>
         <div class="flex items-center space-x-4 px-2">

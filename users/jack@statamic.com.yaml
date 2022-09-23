@@ -9,4 +9,4 @@ preferences:
       mode: grid
   collections:
     pages:
-      after_save: continue_editing
+      after_save: create_another

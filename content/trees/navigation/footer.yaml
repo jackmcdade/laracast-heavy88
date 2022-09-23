@@ -1,0 +1,16 @@
+tree:
+  -
+    id: ed27a7fb-2a21-4402-8b75-843a0f6980f2
+    title: 'Cool things'
+    url: 'https://ugmonk.com'
+    data:
+      external: true
+  -
+    id: ee509463-b888-4218-bec2-8224370f316d
+    title: 'Cool CMS'
+    url: 'https://statamic.com'
+    data:
+      external: true
+  -
+    id: f6abfdc3-d19e-4bf9-b5a7-6a445b7beb35
+    entry: 757aa31f-283b-4aec-92e2-b316ea06a249

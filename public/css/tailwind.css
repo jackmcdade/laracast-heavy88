@@ -738,6 +738,14 @@ video {
   margin-bottom: 3rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1123,6 +1131,16 @@ video {
   padding-bottom: 1px;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -1343,6 +1361,10 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 .group:hover .group-hover\:scale-100 {

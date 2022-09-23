@@ -8,10 +8,9 @@
             <div class="lg:pl-12">
                 <nav class="text-lg antialiased -ml-1">
                     <ul>
-                        <li><a class="p-1 inline-block transition hover:text-white" href="/">Home</a></li>
-                        <li><a class="p-1 inline-block transition hover:text-white" href="">The Delorean</a></li>
-                        <li><a class="p-1 inline-block transition hover:text-white" href="">FluxTech™</a></li>
-                        <li><a class="p-1 inline-block transition hover:text-white" href="">News & Press</a></li>
+                        {{ nav:footer }}
+                            <li><a class="p-1 inline-block transition hover:text-white" {{ if external }} target="_blank" rel="noopener" {{ /if }} href="{{ url }}">{{ title }}</a></li>
+                        {{ /nav:footer }}
                     </ul>
                 </nav>
             </div>
