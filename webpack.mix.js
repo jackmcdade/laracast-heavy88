@@ -23,6 +23,12 @@ if (mix.inProduction()) {
    mix.version();
 }
 
+mix.browserSync({
+    proxy: 'larasmash.test',
+    files: ["resources/views/**", "content/**/*.md"],
+    notify: false
+});
+
 /*
  |--------------------------------------------------------------------------
  | Statamic Control Panel

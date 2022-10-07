@@ -12,6 +12,8 @@
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.1",
         "autoprefixer": "^10.4.0",
+        "browser-sync": "^2.27.10",
+        "browser-sync-webpack-plugin": "^2.3.0",
         "cross-env": "^7.0",
         "css-loader": "^5.2.7",
         "laravel-mix": "^6.0",

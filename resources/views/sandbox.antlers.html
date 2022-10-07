@@ -1,4 +1,17 @@
-<h1 class="text-4xl text-white font-bold text-center mt-16 mb-8">Antlers Sandbox</h1>
-<div class="max-w-6xl mx-auto p-8 bg-gray-300 rounded-xl">
-    {{ content }}
-</div>
+---
+string: Hello sandbox! I am a single line string.
+bool: true
+int: 6
+y2k: 2000-01-01
+listing:
+  - Ryu
+  - Ken
+  - Guile
+fighters:
+  - { name: Bruce lee, style: Jeet Kune Do }
+  - { name: Chuck Norris, style: Tang Soo Do }
+other: salad
+---
+{{ noparse }}
+{{ title }}
+{{ /noparse }}
