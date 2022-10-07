@@ -68,3 +68,13 @@
         }
     }
 }
+
+form input[type=text],
+form input[type=email],
+form textarea {
+    @apply bg-gray-300 focus:bg-gray-200 w-full rounded-lg text-white placeholder-gray-700 inline-block py-3 px-4 outline-none focus:ring-2 ring-yellow font-medium;
+}
+
+form textarea {
+    @apply h-40;
+}
