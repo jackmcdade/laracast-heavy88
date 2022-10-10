@@ -10,3 +10,11 @@ preferences:
   collections:
     pages:
       after_save: create_another
+  forms:
+    contact:
+      columns:
+        - datestamp
+        - name
+        - email
+        - note
+        - resume

@@ -615,6 +615,7 @@ video {
 
 form input[type=text], 
 form input[type=email], 
+form input[type=number], 
 form textarea {
   display: inline-block;
   width: 100%;
@@ -630,13 +631,14 @@ form textarea {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form textarea::-moz-placeholder {
+form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form input[type=number]::-moz-placeholder, form textarea::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(195 191 191 / var(--tw-placeholder-opacity));
 }
 
 form input[type=text]::placeholder, 
 form input[type=email]::placeholder, 
+form input[type=number]::placeholder, 
 form textarea::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(195 191 191 / var(--tw-placeholder-opacity));
@@ -644,6 +646,7 @@ form textarea::placeholder {
 
 form input[type=text], 
 form input[type=email], 
+form input[type=number], 
 form textarea {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -653,6 +656,7 @@ form textarea {
 
 form input[type=text]:focus, 
 form input[type=email]:focus, 
+form input[type=number]:focus, 
 form textarea:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(29 33 41 / var(--tw-bg-opacity));
@@ -663,6 +667,41 @@ form textarea:focus {
 
 form textarea {
   height: 10rem;
+}
+
+.related-block {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: -4rem;
+  display: inline-block;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 39 103 / var(--tw-text-opacity));
+}
+
+.related-block:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 245 181 / var(--tw-bg-opacity));
+}
+
+.quote-block {
+  margin-bottom: 2rem;
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 245 181 / var(--tw-border-opacity));
+  padding-left: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 245 181 / var(--tw-text-opacity));
 }
 
 .pointer-events-none {
@@ -740,10 +779,6 @@ form textarea {
   order: 9999;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -772,6 +807,10 @@ form textarea {
 
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .-ml-1 {
@@ -848,10 +887,6 @@ form textarea {
 
 .h-full {
   height: 100%;
-}
-
-.h-32 {
-  height: 8rem;
 }
 
 .min-h-screen {
@@ -1314,8 +1349,8 @@ form textarea {
   font-weight: 700;
 }
 
-.font-medium {
-  font-weight: 500;
+.italic {
+  font-style: italic;
 }
 
 .leading-normal {
@@ -1349,6 +1384,11 @@ form textarea {
   color: rgb(195 191 191 / var(--tw-text-opacity));
 }
 
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(255 245 181 / var(--tw-text-opacity));
+}
+
 .text-red {
   --tw-text-opacity: 1;
   color: rgb(255 39 103 / var(--tw-text-opacity));
@@ -1357,11 +1397,6 @@ form textarea {
 .text-green {
   --tw-text-opacity: 1;
   color: rgb(101 254 165 / var(--tw-text-opacity));
-}
-
-.text-yellow {
-  --tw-text-opacity: 1;
-  color: rgb(255 245 181 / var(--tw-text-opacity));
 }
 
 .text-gray-100 {
@@ -1377,16 +1412,6 @@ form textarea {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.placeholder-gray-700::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(195 191 191 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-700::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(195 191 191 / var(--tw-placeholder-opacity));
 }
 
 .opacity-75 {
@@ -1419,16 +1444,6 @@ form textarea {
   --tw-shadow: 0 2px 98px 7px rgba(245,67,106,0.27);
   --tw-shadow-colored: 0 2px 98px 7px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.ring-yellow {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 245 181 / var(--tw-ring-opacity));
 }
 
 .filter {
@@ -1499,20 +1514,9 @@ form textarea {
           text-decoration-line: underline;
 }
 
-.focus\:bg-gray-200:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 33 41 / var(--tw-bg-opacity));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:ring-2:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .group:hover .group-hover\:block {

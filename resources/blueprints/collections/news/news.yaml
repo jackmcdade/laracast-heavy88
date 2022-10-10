@@ -74,6 +74,89 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
+          collapse: false
+          sets:
+            quote:
+              display: Quote
+              fields:
+                -
+                  handle: bard_field
+                  field:
+                    collapse: false
+                    always_show_set_button: false
+                    previews: true
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                    save_html: true
+                    toolbar_mode: floating
+                    link_noopener: true
+                    link_noreferrer: true
+                    target_blank: true
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    antlers: false
+                    remove_empty_nodes: false
+                    display: 'Bard Field'
+                    type: bard
+                    icon: bard
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: author
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Author
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+            related_articles:
+              display: 'Related Articles'
+              fields:
+                -
+                  handle: related_entries
+                  field:
+                    mode: default
+                    create: false
+                    collections:
+                      - news
+                    display: 'Related Entries'
+                    type: entries
+                    icon: entries
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+            embed:
+              display: Embed
+              fields:
+                -
+                  handle: embed_template
+                  field:
+                    hide_partials: false
+                    blueprint: false
+                    folder: partials
+                    display: embed_template
+                    type: template
+                    icon: template
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
   sidebar:
     display: Sidebar
     fields:

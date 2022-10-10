@@ -66,6 +66,8 @@ return [
     |
     */
 
+    // 'cache' => false // Disable
+
     'cache' => [
         'expiry' => 60,
     ],
