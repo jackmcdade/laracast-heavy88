@@ -3,11 +3,9 @@
         <div class="flex flex-col lg:flex-row justify-between space-y-12 lg:space-y-0">
             <div class="">
                 <a class="text-3xl text-white block mb-8 font-bold hover:text-yellow" href="/">Heavy 88</a>
-                {{ nocache }}
-                    {{ quote_fetcher author="Tom Havaford" }}
-                        <p class="text-xl max-w-md mx-auto text-gray-500 antialiased">{{ value }}</p>
-                    {{ /quote_fetcher }}
-                {{ /nocache }}
+                {{ quote_fetcher author="Tom Havaford" }}
+                    <p class="text-xl max-w-md mx-auto text-gray-500 antialiased">{{ value }}</p>
+                {{ /quote_fetcher }}
             </div>
             <div class="lg:pl-12">
                 <nav class="text-lg antialiased -ml-1">

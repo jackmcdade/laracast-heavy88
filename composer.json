@@ -15,8 +15,10 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "spatie/fork": "^1.1",
         "statamic/cms": "3.3.*",
-        "statamic/quotefetcher": "dev-main"
+        "statamic/quotefetcher": "dev-main",
+        "statamic/ssg": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
