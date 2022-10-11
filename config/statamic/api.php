@@ -15,12 +15,12 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_API_ENABLED', false),
+    'enabled' => true,
 
     'resources' => [
-        'collections' => false,
+        'collections' => true,
         'navs' => false,
-        'taxonomies' => false,
+        'taxonomies' => true,
         'assets' => false,
         'globals' => false,
         'forms' => false,
@@ -66,10 +66,10 @@ return [
     |
     */
 
-    // 'cache' => false // Disable
+    'cache' => false // Disable
 
-    'cache' => [
-        'expiry' => 60,
-    ],
+    // 'cache' => [
+    //     'expiry' => 60,
+    // ],
 
 ];

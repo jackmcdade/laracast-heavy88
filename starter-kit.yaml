@@ -1,0 +1,12 @@
+export_paths:
+  - content
+  - resources/blueprints
+  - resources/css/site.css
+  - resources/views
+  - routes/web.php
+  - public/assets
+  - public/css
+  - public/img
+  - package.json
+  - tailwind.config.js
+  - webpack.mix.js

@@ -14,12 +14,12 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_GRAPHQL_ENABLED', false),
+    'enabled' => true,
 
     'resources' => [
-        'collections' => false,
+        'collections' => true,
         'navs' => false,
-        'taxonomies' => false,
+        'taxonomies' => true,
         'assets' => false,
         'globals' => false,
         'sites' => false,
@@ -39,10 +39,10 @@ return [
     |
     */
 
-    // 'cache' => false // Disable
+    'cache' => false // Disable
 
-    'cache' => [
-        'expiry' => 60,
-    ],
+    // 'cache' => [
+    //     'expiry' => 60,
+    // ],
 
 ];
