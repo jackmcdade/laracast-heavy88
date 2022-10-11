@@ -1,0 +1,19 @@
+{
+    "name": "statamic/quotefetcher",
+    "autoload": {
+        "psr-4": {
+            "Statamic\\Quotefetcher\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Quotefetcher",
+            "description": "Quotefetcher addon"
+        },
+        "laravel": {
+            "providers": [
+                "Statamic\\Quotefetcher\\ServiceProvider"
+            ]
+        }
+    }
+}
