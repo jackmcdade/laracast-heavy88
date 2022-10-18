@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Statamic\Facades\Entry;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::statamic('search', 'search');
+
+Route::get('test', function() {
+
+    return view('test');
+});
